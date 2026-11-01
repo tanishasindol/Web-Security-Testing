@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security Testing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🛡️ SecureScan</div>
+    <span class="badge">WEB SECURITY TOOL</span>
+</header>
+
+<main>
+
+    <section class="hero">
+        <p class="tag">CYBERSECURITY ANALYSIS</p>
+        <h1>Web Security Testing</h1>
+        <p>Analyze URLs and identify common security risks.</p>
+    </section>
+
+    <section class="scan-card">
+
+        <h2>🔍 Security Scanner</h2>
+        <p>Enter a URL to perform basic security checks.</p>
+
+        <input
+            type="url"
+            id="websiteUrl"
+            placeholder="https://example.com"
+        >
+
+        <button id="scanBtn" onclick="scanWebsite()">
+            Start Security Scan →
+        </button>
+
+        <div id="message"></div>
+
+    </section>
+
+    <section class="results">
+
+        <h2>Security Overview</h2>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span>🔎</span>
+                <h3 id="totalTests">0</h3>
+                <p>Tests Performed</p>
+            </div>
+
+            <div class="stat-card">
+                <span>⚠️</span>
+                <h3 id="risksFound">0</h3>
+                <p>Potential Risks</p>
+            </div>
+
+            <div class="stat-card">
+                <span>✅</span>
+                <h3 id="safeTests">0</h3>
+                <p>Checks Passed</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="report-card">
+
+        <h2>📋 Security Test Results</h2>
+
+        <div id="resultsList">
+            <p class="empty">
+                No security tests performed yet.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="history-card">
+
+        <div class="history-heading">
+            <h2>Recent Scan History</h2>
+            <button class="clear-btn" onclick="clearHistory()">
+                Clear
+            </button>
+        </div>
+
+        <div id="historyList">
+            <p class="empty">No scan history available.</p>
+        </div>
+
+    </section>
+
+    <section class="info-card">
+        <h2>About SecureScan</h2>
+        <p>
+            SecureScan is an educational web security testing
+            application. It checks URL characteristics and
+            identifies common security warning patterns.
+        </p>
+        <p class="notice">
+            Note: This tool performs basic client-side checks.
+            It does not conduct a real penetration test or
+            verify the security of a remote server.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 SecureScan | Web Security Testing Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
